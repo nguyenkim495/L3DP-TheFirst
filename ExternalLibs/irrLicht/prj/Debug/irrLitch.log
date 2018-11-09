@@ -1,0 +1,749 @@
+﻿Build started 11/7/2018 7:35:19 AM.
+     1>Project "E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\irrLitch.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\include" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\irr" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\irr\device" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\gui" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\io" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\particleSystem" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\writers" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\sceneNodes" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\loaders" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\collision" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\animators" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null\Writer" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null\Loader" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Direct3D9" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Direct3D8" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\BurningVideo" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Software" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\OpenGL" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\zlib" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\lzma" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\libpng" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\jpeglib" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\bzip2" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\aesGladman" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\aesGladman\aescrypt.cpp ..\src\aesGladman\aeskey.cpp ..\src\aesGladman\aestab.cpp ..\src\aesGladman\fileenc.cpp ..\src\aesGladman\hmac.cpp ..\src\aesGladman\prng.cpp ..\src\aesGladman\pwd2key.cpp ..\src\aesGladman\sha1.cpp ..\src\aesGladman\sha2.cpp ..\src\irrLicht\gui\CDefaultGUIElementFactory.cpp ..\src\irrLicht\gui\CGUIButton.cpp ..\src\irrLicht\gui\CGUICheckBox.cpp ..\src\irrLicht\gui\CGUIColorSelectDialog.cpp ..\src\irrLicht\gui\CGUIComboBox.cpp ..\src\irrLicht\gui\CGUIContextMenu.cpp ..\src\irrLicht\gui\CGUIEditBox.cpp ..\src\irrLicht\gui\CGUIEnvironment.cpp ..\src\irrLicht\gui\CGUIFileOpenDialog.cpp ..\src\irrLicht\gui\CGUIFont.cpp ..\src\irrLicht\gui\CGUIImage.cpp ..\src\irrLicht\gui\CGUIImageList.cpp ..\src\irrLicht\gui\CGUIInOutFader.cpp ..\src\irrLicht\gui\CGUIListBox.cpp ..\src\irrLicht\gui\CGUIMenu.cpp ..\src\irrLicht\gui\CGUIMeshViewer.cpp ..\src\irrLicht\gui\CGUIMessageBox.cpp ..\src\irrLicht\gui\CGUIModalScreen.cpp ..\src\irrLicht\gui\CGUIScrollBar.cpp ..\src\irrLicht\gui\CGUISkin.cpp ..\src\irrLicht\gui\CGUISpinBox.cpp ..\src\irrLicht\gui\CGUISpriteBank.cpp ..\src\irrLicht\gui\CGUIStaticText.cpp ..\src\irrLicht\gui\CGUITabControl.cpp ..\src\irrLicht\gui\CGUITable.cpp ..\src\irrLicht\gui\CGUIToolBar.cpp ..\src\irrLicht\gui\CGUITreeView.cpp ..\src\irrLicht\gui\CGUIWindow.cpp ..\src\irrLicht\io\CAttributes.cpp ..\src\irrLicht\io\CFileList.cpp ..\src\irrLicht\io\CFileSystem.cpp ..\src\irrLicht\io\CLimitReadFile.cpp ..\src\irrLicht\io\CMemoryFile.cpp ..\src\irrLicht\io\CMountPointReader.cpp ..\src\irrLicht\io\CNPKReader.cpp ..\src\irrLicht\io\CPakReader.cpp ..\src\irrLicht\io\CReadFile.cpp ..\src\irrLicht\io\CTarReader.cpp ..\src\irrLicht\io\CWADReader.cpp ..\src\irrLicht\io\CWriteFile.cpp ..\src\irrLicht\io\CXMLReader.cpp ..\src\irrLicht\io\CXMLWriter.cpp ..\src\irrLicht\io\CZipReader.cpp ..\src\irrLicht\io\irrXML.cpp ..\src\irrLicht\irr\CLogger.cpp ..\src\irrLicht\irr\COSOperator.cpp ..\src\irrLicht\irr\device\CIrrDeviceConsole.cpp ..\src\irrLicht\irr\device\CIrrDeviceFB.cpp ..\src\irrLicht\irr\device\CIrrDeviceLinux.cpp ..\src\irrLicht\irr\device\CIrrDeviceSDL.cpp ..\src\irrLicht\irr\device\CIrrDeviceStub.cpp ..\src\irrLicht\irr\device\CIrrDeviceWin32.cpp ..\src\irrLicht\irr\device\CIrrDeviceWinCE.cpp ..\src\irrLicht\irr\Irrlicht.cpp ..\src\irrLicht\irr\os.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorCameraFPS.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorCameraMaya.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorCollisionResponse.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorDelete.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorFlyCircle.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorFlyStraight.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorFollowSpline.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorRotation.cpp ..\src\irrLicht\scene\animators\CSceneNodeAnimatorTexture.cpp ..\src\irrLicht\scene\CDefaultSceneNodeAnimatorFactory.cpp ..\src\irrLicht\scene\CDefaultSceneNodeFactory.cpp ..\src\irrLicht\scene\CGeometryCreator.cpp ..\src\irrLicht\scene\CMeshCache.cpp ..\src\irrLicht\scene\CMeshManipulator.cpp ..\src\irrLicht\scene\collision\CMetaTriangleSelector.cpp ..\src\irrLicht\scene\collision\COctreeTriangleSelector.cpp ..\src\irrLicht\scene\collision\CSceneCollisionManager.cpp ..\src\irrLicht\scene\collision\CTerrainTriangleSelector.cpp ..\src\irrLicht\scene\collision\CTriangleBBSelector.cpp ..\src\irrLicht\scene\collision\CTriangleSelector.cpp ..\src\irrLicht\scene\CSceneLoaderIrr.cpp ..\src\irrLicht\scene\CSceneManager.cpp ..\src\irrLicht\scene\loaders\C3DSMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CAnimatedMeshHalfLife.cpp ..\src\irrLicht\scene\loaders\CAnimatedMeshMD2.cpp ..\src\irrLicht\scene\loaders\CAnimatedMeshMD3.cpp ..\src\irrLicht\scene\loaders\CB3DMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CBSPMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CColladaFileLoader.cpp ..\src\irrLicht\scene\loaders\CCSMLoader.cpp ..\src\irrLicht\scene\loaders\CDMFLoader.cpp ..\src\irrLicht\scene\loaders\CIrrMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CLMTSMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CLWOMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CMD2MeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CMD3MeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CMS3DMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CMY3DMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\COBJMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\COCTLoader.cpp ..\src\irrLicht\scene\loaders\COgreMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CPLYMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CQ3LevelMesh.cpp ..\src\irrLicht\scene\loaders\CSkinnedMesh.cpp ..\src\irrLicht\scene\loaders\CSMFMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CSTLMeshFileLoader.cpp ..\src\irrLicht\scene\loaders\CXMeshFileLoader.cpp ..\src\irrLicht\scene\particleSystem\CParticleAnimatedMeshSceneNodeEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleAttractionAffector.cpp ..\src\irrLicht\scene\particleSystem\CParticleBoxEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleCylinderEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleFadeOutAffector.cpp ..\src\irrLicht\scene\particleSystem\CParticleGravityAffector.cpp ..\src\irrLicht\scene\particleSystem\CParticleMeshEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticlePointEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleRingEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleRotationAffector.cpp ..\src\irrLicht\scene\particleSystem\CParticleScaleAffector.cpp ..\src\irrLicht\scene\particleSystem\CParticleSphereEmitter.cpp ..\src\irrLicht\scene\particleSystem\CParticleSystemSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CAnimatedMeshSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CBillboardSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CBoneSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CCameraSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CCubeSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CDummyTransformationSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CEmptySceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CLightSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CMeshSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\COctreeSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CQuake3ShaderSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CShadowVolumeSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CSkyBoxSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CSkyDomeSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CSphereSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CTerrainSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CTextSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CVolumeLightSceneNode.cpp ..\src\irrLicht\scene\sceneNodes\CWaterSurfaceSceneNode.cpp ..\src\irrLicht\scene\writers\CColladaMeshWriter.cpp ..\src\irrLicht\scene\writers\CIrrMeshWriter.cpp ..\src\irrLicht\scene\writers\COBJMeshWriter.cpp ..\src\irrLicht\scene\writers\CPLYMeshWriter.cpp ..\src\irrLicht\scene\writers\CSTLMeshWriter.cpp ..\src\irrLicht\video\BurningVideo\CBurningShader_Raster_Reference.cpp ..\src\irrLicht\video\BurningVideo\CDepthBuffer.cpp ..\src\irrLicht\video\BurningVideo\CSoftwareDriver2.cpp ..\src\irrLicht\video\BurningVideo\CSoftwareTexture2.cpp ..\src\irrLicht\video\BurningVideo\CTRGouraud2.cpp ..\src\irrLicht\video\BurningVideo\CTRGouraudAlpha2.cpp ..\src\irrLicht\video\BurningVideo\CTRGouraudAlphaNoZ2.cpp ..\src\irrLicht\video\BurningVideo\CTRNormalMap.cpp ..\src\irrLicht\video\BurningVideo\CTRStencilShadow.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureBlend.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureDetailMap2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraud2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudAdd2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudAddNoZ2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudAlpha.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudNoZ.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudNoZ2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureGouraudVertexAlpha2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureLightMap2_Add.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureLightMap2_M1.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureLightMap2_M2.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureLightMap2_M4.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureLightMapGouraud2_M4.cpp ..\src\irrLicht\video\BurningVideo\CTRTextureWire2.cpp ..\src\irrLicht\video\BurningVideo\IBurningShader.cpp ..\src\irrLicht\video\CCgMaterialRenderer.cpp ..\src\irrLicht\video\CVideoModeList.cpp ..\src\irrLicht\video\Direct3D8\CD3D8Driver.cpp ..\src\irrLicht\video\Direct3D8\CD3D8NormalMapRenderer.cpp ..\src\irrLicht\video\Direct3D8\CD3D8ParallaxMapRenderer.cpp ..\src\irrLicht\video\Direct3D8\CD3D8ShaderMaterialRenderer.cpp ..\src\irrLicht\video\Direct3D8\CD3D8Texture.cpp ..\src\irrLicht\video\Direct3D9\CD3D9CgMaterialRenderer.cpp ..\src\irrLicht\video\Direct3D9\CD3D9Driver.cpp ..\src\irrLicht\video\Direct3D9\CD3D9HLSLMaterialRenderer.cpp ..\src\irrLicht\video\Direct3D9\CD3D9NormalMapRenderer.cpp ..\src\irrLicht\video\Direct3D9\CD3D9ParallaxMapRenderer.cpp ..\src\irrLicht\video\Direct3D9\CD3D9ShaderMaterialRenderer.cpp ..\src\irrLicht\video\Direct3D9\CD3D9Texture.cpp ..\src\irrLicht\video\Null\CColorConverter.cpp ..\src\irrLicht\video\Null\CFPSCounter.cpp ..\src\irrLicht\video\Null\CImage.cpp ..\src\irrLicht\video\Null\CNullDriver.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderBMP.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderDDS.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderJPG.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderPCX.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderPNG.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderPPM.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderPSD.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderRGB.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderTGA.cpp ..\src\irrLicht\video\Null\Loader\CImageLoaderWAL.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterBMP.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterJPG.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterPCX.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterPNG.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterPPM.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterPSD.cpp ..\src\irrLicht\video\Null\Writer\CImageWriterTGA.cpp ..\src\irrLicht\video\OpenGL\COpenGLCgMaterialRenderer.cpp ..\src\irrLicht\video\OpenGL\COpenGLDriver.cpp ..\src\irrLicht\video\OpenGL\COpenGLExtensionHandler.cpp ..\src\irrLicht\video\OpenGL\COpenGLNormalMapRenderer.cpp ..\src\irrLicht\video\OpenGL\COpenGLParallaxMapRenderer.cpp ..\src\irrLicht\video\OpenGL\COpenGLShaderMaterialRenderer.cpp ..\src\irrLicht\video\OpenGL\COpenGLSLMaterialRenderer.cpp ..\src\irrLicht\video\OpenGL\COpenGLTexture.cpp ..\src\irrLicht\video\Software\CSoftwareDriver.cpp ..\src\irrLicht\video\Software\CSoftwareTexture.cpp ..\src\irrLicht\video\Software\CTRFlat.cpp ..\src\irrLicht\video\Software\CTRFlatWire.cpp ..\src\irrLicht\video\Software\CTRGouraud.cpp ..\src\irrLicht\video\Software\CTRGouraudWire.cpp ..\src\irrLicht\video\Software\CTRTextureFlat.cpp ..\src\irrLicht\video\Software\CTRTextureFlatWire.cpp ..\src\irrLicht\video\Software\CTRTextureGouraud.cpp ..\src\irrLicht\video\Software\CTRTextureGouraudAdd.cpp ..\src\irrLicht\video\Software\CTRTextureGouraudAlphaNoZ.cpp ..\src\irrLicht\video\Software\CTRTextureGouraudWire.cpp ..\src\irrLicht\video\Software\CZBuffer.cpp
+         CZBuffer.cpp
+         CTRTextureGouraudWire.cpp
+         CTRTextureGouraudAlphaNoZ.cpp
+         CTRTextureGouraudAdd.cpp
+         CTRTextureGouraud.cpp
+         CTRTextureFlatWire.cpp
+         CTRTextureFlat.cpp
+         CTRGouraudWire.cpp
+         CTRGouraud.cpp
+         CTRFlatWire.cpp
+         CTRFlat.cpp
+         CSoftwareTexture.cpp
+         CSoftwareDriver.cpp
+         COpenGLTexture.cpp
+         COpenGLSLMaterialRenderer.cpp
+         COpenGLShaderMaterialRenderer.cpp
+         COpenGLParallaxMapRenderer.cpp
+         COpenGLNormalMapRenderer.cpp
+         COpenGLExtensionHandler.cpp
+         COpenGLDriver.cpp
+         Generating Code...
+         Compiling...
+         COpenGLCgMaterialRenderer.cpp
+         CImageWriterTGA.cpp
+         CImageWriterPSD.cpp
+         CImageWriterPPM.cpp
+         CImageWriterPNG.cpp
+         CImageWriterPCX.cpp
+         CImageWriterJPG.cpp
+         CImageWriterBMP.cpp
+         CImageLoaderWAL.cpp
+         CImageLoaderTGA.cpp
+         CImageLoaderRGB.cpp
+         CImageLoaderPSD.cpp
+         CImageLoaderPPM.cpp
+         CImageLoaderPNG.cpp
+         CImageLoaderPCX.cpp
+         CImageLoaderJPG.cpp
+         CImageLoaderDDS.cpp
+         CImageLoaderBMP.cpp
+         CNullDriver.cpp
+         CImage.cpp
+         Generating Code...
+         Compiling...
+         CFPSCounter.cpp
+         CColorConverter.cpp
+         CD3D9Texture.cpp
+         CD3D9ShaderMaterialRenderer.cpp
+         CD3D9ParallaxMapRenderer.cpp
+         CD3D9NormalMapRenderer.cpp
+         CD3D9HLSLMaterialRenderer.cpp
+         CD3D9Driver.cpp
+         CD3D9CgMaterialRenderer.cpp
+         CD3D8Texture.cpp
+         CD3D8ShaderMaterialRenderer.cpp
+         CD3D8ParallaxMapRenderer.cpp
+         CD3D8NormalMapRenderer.cpp
+         CD3D8Driver.cpp
+         CVideoModeList.cpp
+         CCgMaterialRenderer.cpp
+         IBurningShader.cpp
+         CTRTextureWire2.cpp
+         CTRTextureLightMapGouraud2_M4.cpp
+         CTRTextureLightMap2_M4.cpp
+         Generating Code...
+         Compiling...
+         CTRTextureLightMap2_M2.cpp
+         CTRTextureLightMap2_M1.cpp
+         CTRTextureLightMap2_Add.cpp
+         CTRTextureGouraudVertexAlpha2.cpp
+         CTRTextureGouraudNoZ2.cpp
+         CTRTextureGouraudNoZ.cpp
+         CTRTextureGouraudAlpha.cpp
+         CTRTextureGouraudAddNoZ2.cpp
+         CTRTextureGouraudAdd2.cpp
+         CTRTextureGouraud2.cpp
+         CTRTextureDetailMap2.cpp
+         CTRTextureBlend.cpp
+         CTRStencilShadow.cpp
+         CTRNormalMap.cpp
+         CTRGouraudAlphaNoZ2.cpp
+         CTRGouraudAlpha2.cpp
+         CTRGouraud2.cpp
+         CSoftwareTexture2.cpp
+         CSoftwareDriver2.cpp
+         CDepthBuffer.cpp
+         Generating Code...
+         Compiling...
+         CBurningShader_Raster_Reference.cpp
+         CSTLMeshWriter.cpp
+         CPLYMeshWriter.cpp
+         COBJMeshWriter.cpp
+         CIrrMeshWriter.cpp
+         CColladaMeshWriter.cpp
+         CWaterSurfaceSceneNode.cpp
+         CVolumeLightSceneNode.cpp
+         CTextSceneNode.cpp
+         CTerrainSceneNode.cpp
+         CSphereSceneNode.cpp
+         CSkyDomeSceneNode.cpp
+         CSkyBoxSceneNode.cpp
+         CShadowVolumeSceneNode.cpp
+         CQuake3ShaderSceneNode.cpp
+         COctreeSceneNode.cpp
+         CMeshSceneNode.cpp
+         CLightSceneNode.cpp
+         CEmptySceneNode.cpp
+         CDummyTransformationSceneNode.cpp
+         Generating Code...
+         Compiling...
+         CCubeSceneNode.cpp
+         CCameraSceneNode.cpp
+         CBoneSceneNode.cpp
+         CBillboardSceneNode.cpp
+         CAnimatedMeshSceneNode.cpp
+         CParticleSystemSceneNode.cpp
+         CParticleSphereEmitter.cpp
+         CParticleScaleAffector.cpp
+         CParticleRotationAffector.cpp
+         CParticleRingEmitter.cpp
+         CParticlePointEmitter.cpp
+         CParticleMeshEmitter.cpp
+         CParticleGravityAffector.cpp
+         CParticleFadeOutAffector.cpp
+         CParticleCylinderEmitter.cpp
+         CParticleBoxEmitter.cpp
+         CParticleAttractionAffector.cpp
+         CParticleAnimatedMeshSceneNodeEmitter.cpp
+         CXMeshFileLoader.cpp
+         CSTLMeshFileLoader.cpp
+         Generating Code...
+         Compiling...
+         CSMFMeshFileLoader.cpp
+         CSkinnedMesh.cpp
+         CQ3LevelMesh.cpp
+         CPLYMeshFileLoader.cpp
+         COgreMeshFileLoader.cpp
+         COCTLoader.cpp
+         COBJMeshFileLoader.cpp
+         CMY3DMeshFileLoader.cpp
+         CMS3DMeshFileLoader.cpp
+         CMD3MeshFileLoader.cpp
+         CMD2MeshFileLoader.cpp
+         CLWOMeshFileLoader.cpp
+         CLMTSMeshFileLoader.cpp
+         CIrrMeshFileLoader.cpp
+         CDMFLoader.cpp
+         CCSMLoader.cpp
+         CColladaFileLoader.cpp
+         CBSPMeshFileLoader.cpp
+         CB3DMeshFileLoader.cpp
+         CAnimatedMeshMD3.cpp
+         Generating Code...
+         Compiling...
+         CAnimatedMeshMD2.cpp
+         CAnimatedMeshHalfLife.cpp
+         C3DSMeshFileLoader.cpp
+         CSceneManager.cpp
+         CSceneLoaderIrr.cpp
+         CTriangleSelector.cpp
+         CTriangleBBSelector.cpp
+         CTerrainTriangleSelector.cpp
+         CSceneCollisionManager.cpp
+         COctreeTriangleSelector.cpp
+         CMetaTriangleSelector.cpp
+         CMeshManipulator.cpp
+         CMeshCache.cpp
+         CGeometryCreator.cpp
+         CDefaultSceneNodeFactory.cpp
+         CDefaultSceneNodeAnimatorFactory.cpp
+         CSceneNodeAnimatorTexture.cpp
+         CSceneNodeAnimatorRotation.cpp
+         CSceneNodeAnimatorFollowSpline.cpp
+         CSceneNodeAnimatorFlyStraight.cpp
+         Generating Code...
+         Compiling...
+         CSceneNodeAnimatorFlyCircle.cpp
+         CSceneNodeAnimatorDelete.cpp
+         CSceneNodeAnimatorCollisionResponse.cpp
+         CSceneNodeAnimatorCameraMaya.cpp
+         CSceneNodeAnimatorCameraFPS.cpp
+         os.cpp
+         Irrlicht.cpp
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\irr\irrlicht.cpp(68): warning C4273: 'irr::createDeviceEx' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrlicht.h(354) : see previous definition of 'createDeviceEx'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\irr\irrlicht.cpp(120): warning C4273: 'irr::core::IdentityMatrix' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\matrix4.h(2238) : see previous definition of 'IdentityMatrix'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\irr\irrlicht.cpp(121): warning C4273: 'irr::core::LOCALE_DECIMAL_POINTS' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\fast_atof.h(18) : see previous definition of 'LOCALE_DECIMAL_POINTS'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\irr\irrlicht.cpp(126): warning C4273: 'irr::video::IdentityMaterial' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\smaterial.h(680) : see previous definition of 'IdentityMaterial'
+         CIrrDeviceWinCE.cpp
+         CIrrDeviceWin32.cpp
+         CIrrDeviceStub.cpp
+         CIrrDeviceSDL.cpp
+         CIrrDeviceLinux.cpp
+         CIrrDeviceFB.cpp
+         CIrrDeviceConsole.cpp
+         COSOperator.cpp
+         CLogger.cpp
+         irrXML.cpp
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(86): warning C4273: 'irr::io::createIrrXMLReader' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(438) : see previous definition of 'createIrrXMLReader'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(94): warning C4273: 'irr::io::createIrrXMLReader' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(450) : see previous definition of 'createIrrXMLReader'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(103): warning C4273: 'irr::io::createIrrXMLReader' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(465) : see previous definition of 'createIrrXMLReader'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(121): warning C4273: 'irr::io::createIrrXMLReaderUTF16' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(478) : see previous definition of 'createIrrXMLReaderUTF16'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(129): warning C4273: 'irr::io::createIrrXMLReaderUTF16' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(490) : see previous definition of 'createIrrXMLReaderUTF16'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(138): warning C4273: 'irr::io::createIrrXMLReaderUTF16' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(505) : see previous definition of 'createIrrXMLReaderUTF16'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(156): warning C4273: 'irr::io::createIrrXMLReaderUTF32' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(518) : see previous definition of 'createIrrXMLReaderUTF32'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(164): warning C4273: 'irr::io::createIrrXMLReaderUTF32' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(530) : see previous definition of 'createIrrXMLReaderUTF32'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\irrlicht\io\irrxml.cpp(173): warning C4273: 'irr::io::createIrrXMLReaderUTF32' : inconsistent dll linkage
+                 e:\projects data\thefirst\externallibs\irrlicht\include\irrxml.h(546) : see previous definition of 'createIrrXMLReaderUTF32'
+         CZipReader.cpp
+         CXMLWriter.cpp
+         CXMLReader.cpp
+         Generating Code...
+         Compiling...
+         CWriteFile.cpp
+         CWADReader.cpp
+         CTarReader.cpp
+         CReadFile.cpp
+         CPakReader.cpp
+         CNPKReader.cpp
+         CMountPointReader.cpp
+         CMemoryFile.cpp
+         CLimitReadFile.cpp
+         CFileSystem.cpp
+         CFileList.cpp
+         CAttributes.cpp
+         CGUIWindow.cpp
+         CGUITreeView.cpp
+         CGUIToolBar.cpp
+         CGUITable.cpp
+         CGUITabControl.cpp
+         CGUIStaticText.cpp
+         CGUISpriteBank.cpp
+         CGUISpinBox.cpp
+         Generating Code...
+         Compiling...
+         CGUISkin.cpp
+         CGUIScrollBar.cpp
+         CGUIModalScreen.cpp
+         CGUIMessageBox.cpp
+         CGUIMeshViewer.cpp
+         CGUIMenu.cpp
+         CGUIListBox.cpp
+         CGUIInOutFader.cpp
+         CGUIImageList.cpp
+         CGUIImage.cpp
+         CGUIFont.cpp
+         CGUIFileOpenDialog.cpp
+         CGUIEnvironment.cpp
+         CGUIEditBox.cpp
+         CGUIContextMenu.cpp
+         CGUIComboBox.cpp
+         CGUIColorSelectDialog.cpp
+         CGUICheckBox.cpp
+         CGUIButton.cpp
+         CDefaultGUIElementFactory.cpp
+         Generating Code...
+         Compiling...
+         sha2.cpp
+         sha1.cpp
+         pwd2key.cpp
+         prng.cpp
+         hmac.cpp
+         fileenc.cpp
+         aestab.cpp
+         aeskey.cpp
+         aescrypt.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\include" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\irr" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\irr\device" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\gui" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\io" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\particleSystem" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\writers" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\sceneNodes" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\loaders" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\collision" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\scene\animators" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null\Writer" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null\Loader" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Null" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Direct3D9" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Direct3D8" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\BurningVideo" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\Software" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\irrLicht\video\OpenGL" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\zlib" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\lzma" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\libpng" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\jpeglib" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\bzip2" /I"E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\..\src\aesGladman" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\bzip2\blocksort.c ..\src\bzip2\bzcompress.c ..\src\bzip2\bzip2.c ..\src\bzip2\bzlib.c ..\src\bzip2\crctable.c ..\src\bzip2\decompress.c ..\src\bzip2\dlltest.c ..\src\bzip2\huffman.c ..\src\bzip2\randtable.c ..\src\jpeglib\cdjpeg.c ..\src\jpeglib\jaricom.c ..\src\jpeglib\jcapimin.c ..\src\jpeglib\jcapistd.c ..\src\jpeglib\jcarith.c ..\src\jpeglib\jccoefct.c ..\src\jpeglib\jccolor.c ..\src\jpeglib\jcdctmgr.c ..\src\jpeglib\jchuff.c ..\src\jpeglib\jcinit.c ..\src\jpeglib\jcmainct.c ..\src\jpeglib\jcmarker.c ..\src\jpeglib\jcmaster.c ..\src\jpeglib\jcomapi.c ..\src\jpeglib\jcparam.c ..\src\jpeglib\jcprepct.c ..\src\jpeglib\jcsample.c ..\src\jpeglib\jctrans.c ..\src\jpeglib\jdapimin.c ..\src\jpeglib\jdapistd.c ..\src\jpeglib\jdarith.c ..\src\jpeglib\jdatadst.c ..\src\jpeglib\jdatasrc.c ..\src\jpeglib\jdcoefct.c ..\src\jpeglib\jdcolor.c ..\src\jpeglib\jddctmgr.c ..\src\jpeglib\jdhuff.c ..\src\jpeglib\jdinput.c ..\src\jpeglib\jdmainct.c ..\src\jpeglib\jdmarker.c ..\src\jpeglib\jdmaster.c ..\src\jpeglib\jdmerge.c ..\src\jpeglib\jdpostct.c ..\src\jpeglib\jdsample.c ..\src\jpeglib\jdtrans.c ..\src\jpeglib\jerror.c ..\src\jpeglib\jfdctflt.c ..\src\jpeglib\jfdctfst.c ..\src\jpeglib\jfdctint.c ..\src\jpeglib\jidctflt.c ..\src\jpeglib\jidctfst.c ..\src\jpeglib\jidctint.c ..\src\jpeglib\jmemmgr.c ..\src\jpeglib\jmemname.c ..\src\jpeglib\jquant1.c ..\src\jpeglib\jquant2.c ..\src\jpeglib\jutils.c ..\src\jpeglib\rdbmp.c ..\src\jpeglib\rdcolmap.c ..\src\jpeglib\rdgif.c ..\src\jpeglib\rdppm.c ..\src\jpeglib\rdrle.c ..\src\jpeglib\rdswitch.c ..\src\jpeglib\rdtarga.c ..\src\jpeglib\transupp.c ..\src\jpeglib\wrbmp.c ..\src\jpeglib\wrgif.c ..\src\jpeglib\wrppm.c ..\src\jpeglib\wrrle.c ..\src\jpeglib\wrtarga.c ..\src\libpng\png.c ..\src\libpng\pngerror.c ..\src\libpng\pngget.c ..\src\libpng\pngmem.c ..\src\libpng\pngpread.c ..\src\libpng\pngread.c ..\src\libpng\pngrio.c ..\src\libpng\pngrtran.c ..\src\libpng\pngrutil.c ..\src\libpng\pngset.c ..\src\libpng\pngtrans.c ..\src\libpng\pngwio.c ..\src\libpng\pngwrite.c ..\src\libpng\pngwtran.c ..\src\libpng\pngwutil.c ..\src\lzma\LzmaDec.c ..\src\zlib\adler32.c ..\src\zlib\compress.c ..\src\zlib\crc32.c ..\src\zlib\deflate.c ..\src\zlib\gzclose.c ..\src\zlib\gzlib.c ..\src\zlib\gzread.c ..\src\zlib\gzwrite.c ..\src\zlib\infback.c ..\src\zlib\inffast.c ..\src\zlib\inflate.c ..\src\zlib\inftrees.c ..\src\zlib\trees.c ..\src\zlib\uncompr.c ..\src\zlib\zutil.c
+         zutil.c
+         uncompr.c
+         trees.c
+         inftrees.c
+         inflate.c
+         inffast.c
+         infback.c
+         gzwrite.c
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzwrite.c(84): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(321) : see declaration of 'write'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzwrite.c(102): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(321) : see declaration of 'write'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzwrite.c(573): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(305) : see declaration of 'close'
+         gzread.c
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzread.c(30): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(316) : see declaration of 'read'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzread.c(591): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(305) : see declaration of 'close'
+         gzlib.c
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\zlib\gzlib.c(245): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(315) : see declaration of 'open'
+         gzclose.c
+         deflate.c
+         crc32.c
+         compress.c
+         adler32.c
+         LzmaDec.c
+         pngwutil.c
+         pngwtran.c
+         pngwrite.c
+         pngwio.c
+         Generating Code...
+         Compiling...
+         pngtrans.c
+         pngset.c
+         pngrutil.c
+         pngrtran.c
+         pngrio.c
+         pngread.c
+         pngpread.c
+         pngmem.c
+         pngget.c
+         pngerror.c
+         png.c
+         wrtarga.c
+         wrrle.c
+         wrppm.c
+         wrgif.c
+         wrbmp.c
+         transupp.c
+         rdtarga.c
+         rdswitch.c
+         rdrle.c
+         Generating Code...
+         Compiling...
+         rdppm.c
+         rdgif.c
+         rdcolmap.c
+         rdbmp.c
+         jutils.c
+         jquant2.c
+         jquant1.c
+         jmemname.c
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\jpeglib\jmemname.c(130): warning C4013: 'mktemp' undefined; assuming extern returning int
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\jpeglib\jmemname.c(233): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(285) : see declaration of 'unlink'
+         jmemmgr.c
+         jidctint.c
+         jidctfst.c
+         jidctflt.c
+         jfdctint.c
+         jfdctfst.c
+         jfdctflt.c
+         jerror.c
+         jdtrans.c
+         jdsample.c
+         jdpostct.c
+         jdmerge.c
+         Generating Code...
+         Compiling...
+         jdmaster.c
+         jdmarker.c
+         jdmainct.c
+         jdinput.c
+         jdhuff.c
+         jddctmgr.c
+         jdcolor.c
+         jdcoefct.c
+         jdatasrc.c
+         jdatadst.c
+         jdarith.c
+         jdapistd.c
+         jdapimin.c
+         jctrans.c
+         jcsample.c
+         jcprepct.c
+         jcparam.c
+         jcomapi.c
+         jcmaster.c
+         jcmarker.c
+         Generating Code...
+         Compiling...
+         jcmainct.c
+         jcinit.c
+         jchuff.c
+         jcdctmgr.c
+         jccolor.c
+         jccoefct.c
+         jcarith.c
+         jcapistd.c
+         jcapimin.c
+         jaricom.c
+         cdjpeg.c
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\jpeglib\cdjpeg.c(154): warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(317) : see declaration of 'setmode'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\jpeglib\cdjpeg.c(154): warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _fileno. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(711) : see declaration of 'fileno'
+     1>e:\projects data\thefirst\externallibs\irrlicht\src\jpeglib\cdjpeg.c(172): warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(317) : see declaration of 'setmode'
+         randtable.c
+         huffman.c
+         dlltest.c
+         decompress.c
+         crctable.c
+         bzlib.c
+         bzip2.c
+         bzcompress.c
+         blocksort.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"E:\Projects Data\TheFirst\prj\Debug\irrLitch.lib" /NOLOGO Debug\aescrypt.obj
+         Debug\aeskey.obj
+         Debug\aestab.obj
+         Debug\fileenc.obj
+         Debug\hmac.obj
+         Debug\prng.obj
+         Debug\pwd2key.obj
+         Debug\sha1.obj
+         Debug\sha2.obj
+         Debug\blocksort.obj
+         Debug\bzcompress.obj
+         Debug\bzip2.obj
+         Debug\bzlib.obj
+         Debug\crctable.obj
+         Debug\decompress.obj
+         Debug\dlltest.obj
+         Debug\huffman.obj
+         Debug\randtable.obj
+         Debug\CDefaultGUIElementFactory.obj
+         Debug\CGUIButton.obj
+         Debug\CGUICheckBox.obj
+         Debug\CGUIColorSelectDialog.obj
+         Debug\CGUIComboBox.obj
+         Debug\CGUIContextMenu.obj
+         Debug\CGUIEditBox.obj
+         Debug\CGUIEnvironment.obj
+         Debug\CGUIFileOpenDialog.obj
+         Debug\CGUIFont.obj
+         Debug\CGUIImage.obj
+         Debug\CGUIImageList.obj
+         Debug\CGUIInOutFader.obj
+         Debug\CGUIListBox.obj
+         Debug\CGUIMenu.obj
+         Debug\CGUIMeshViewer.obj
+         Debug\CGUIMessageBox.obj
+         Debug\CGUIModalScreen.obj
+         Debug\CGUIScrollBar.obj
+         Debug\CGUISkin.obj
+         Debug\CGUISpinBox.obj
+         Debug\CGUISpriteBank.obj
+         Debug\CGUIStaticText.obj
+         Debug\CGUITabControl.obj
+         Debug\CGUITable.obj
+         Debug\CGUIToolBar.obj
+         Debug\CGUITreeView.obj
+         Debug\CGUIWindow.obj
+         Debug\CAttributes.obj
+         Debug\CFileList.obj
+         Debug\CFileSystem.obj
+         Debug\CLimitReadFile.obj
+         Debug\CMemoryFile.obj
+         Debug\CMountPointReader.obj
+         Debug\CNPKReader.obj
+         Debug\CPakReader.obj
+         Debug\CReadFile.obj
+         Debug\CTarReader.obj
+         Debug\CWADReader.obj
+         Debug\CWriteFile.obj
+         Debug\CXMLReader.obj
+         Debug\CXMLWriter.obj
+         Debug\CZipReader.obj
+         Debug\irrXML.obj
+         Debug\CLogger.obj
+         Debug\COSOperator.obj
+         Debug\CIrrDeviceConsole.obj
+         Debug\CIrrDeviceFB.obj
+         Debug\CIrrDeviceLinux.obj
+         Debug\CIrrDeviceSDL.obj
+         Debug\CIrrDeviceStub.obj
+         Debug\CIrrDeviceWin32.obj
+         Debug\CIrrDeviceWinCE.obj
+         Debug\Irrlicht.obj
+         Debug\os.obj
+         Debug\CSceneNodeAnimatorCameraFPS.obj
+         Debug\CSceneNodeAnimatorCameraMaya.obj
+         Debug\CSceneNodeAnimatorCollisionResponse.obj
+         Debug\CSceneNodeAnimatorDelete.obj
+         Debug\CSceneNodeAnimatorFlyCircle.obj
+         Debug\CSceneNodeAnimatorFlyStraight.obj
+         Debug\CSceneNodeAnimatorFollowSpline.obj
+         Debug\CSceneNodeAnimatorRotation.obj
+         Debug\CSceneNodeAnimatorTexture.obj
+         Debug\CDefaultSceneNodeAnimatorFactory.obj
+         Debug\CDefaultSceneNodeFactory.obj
+         Debug\CGeometryCreator.obj
+         Debug\CMeshCache.obj
+         Debug\CMeshManipulator.obj
+         Debug\CMetaTriangleSelector.obj
+         Debug\COctreeTriangleSelector.obj
+         Debug\CSceneCollisionManager.obj
+         Debug\CTerrainTriangleSelector.obj
+         Debug\CTriangleBBSelector.obj
+         Debug\CTriangleSelector.obj
+         Debug\CSceneLoaderIrr.obj
+         Debug\CSceneManager.obj
+         Debug\C3DSMeshFileLoader.obj
+         Debug\CAnimatedMeshHalfLife.obj
+         Debug\CAnimatedMeshMD2.obj
+         Debug\CAnimatedMeshMD3.obj
+         Debug\CB3DMeshFileLoader.obj
+         Debug\CBSPMeshFileLoader.obj
+         Debug\CColladaFileLoader.obj
+         Debug\CCSMLoader.obj
+         Debug\CDMFLoader.obj
+         Debug\CIrrMeshFileLoader.obj
+         Debug\CLMTSMeshFileLoader.obj
+         Debug\CLWOMeshFileLoader.obj
+         Debug\CMD2MeshFileLoader.obj
+         Debug\CMD3MeshFileLoader.obj
+         Debug\CMS3DMeshFileLoader.obj
+         Debug\CMY3DMeshFileLoader.obj
+         Debug\COBJMeshFileLoader.obj
+         Debug\COCTLoader.obj
+         Debug\COgreMeshFileLoader.obj
+         Debug\CPLYMeshFileLoader.obj
+         Debug\CQ3LevelMesh.obj
+         Debug\CSkinnedMesh.obj
+         Debug\CSMFMeshFileLoader.obj
+         Debug\CSTLMeshFileLoader.obj
+         Debug\CXMeshFileLoader.obj
+         Debug\CParticleAnimatedMeshSceneNodeEmitter.obj
+         Debug\CParticleAttractionAffector.obj
+         Debug\CParticleBoxEmitter.obj
+         Debug\CParticleCylinderEmitter.obj
+         Debug\CParticleFadeOutAffector.obj
+         Debug\CParticleGravityAffector.obj
+         Debug\CParticleMeshEmitter.obj
+         Debug\CParticlePointEmitter.obj
+         Debug\CParticleRingEmitter.obj
+         Debug\CParticleRotationAffector.obj
+         Debug\CParticleScaleAffector.obj
+         Debug\CParticleSphereEmitter.obj
+         Debug\CParticleSystemSceneNode.obj
+         Debug\CAnimatedMeshSceneNode.obj
+         Debug\CBillboardSceneNode.obj
+         Debug\CBoneSceneNode.obj
+         Debug\CCameraSceneNode.obj
+         Debug\CCubeSceneNode.obj
+         Debug\CDummyTransformationSceneNode.obj
+         Debug\CEmptySceneNode.obj
+         Debug\CLightSceneNode.obj
+         Debug\CMeshSceneNode.obj
+         Debug\COctreeSceneNode.obj
+         Debug\CQuake3ShaderSceneNode.obj
+         Debug\CShadowVolumeSceneNode.obj
+         Debug\CSkyBoxSceneNode.obj
+         Debug\CSkyDomeSceneNode.obj
+         Debug\CSphereSceneNode.obj
+         Debug\CTerrainSceneNode.obj
+         Debug\CTextSceneNode.obj
+         Debug\CVolumeLightSceneNode.obj
+         Debug\CWaterSurfaceSceneNode.obj
+         Debug\CColladaMeshWriter.obj
+         Debug\CIrrMeshWriter.obj
+         Debug\COBJMeshWriter.obj
+         Debug\CPLYMeshWriter.obj
+         Debug\CSTLMeshWriter.obj
+         Debug\CBurningShader_Raster_Reference.obj
+         Debug\CDepthBuffer.obj
+         Debug\CSoftwareDriver2.obj
+         Debug\CSoftwareTexture2.obj
+         Debug\CTRGouraud2.obj
+         Debug\CTRGouraudAlpha2.obj
+         Debug\CTRGouraudAlphaNoZ2.obj
+         Debug\CTRNormalMap.obj
+         Debug\CTRStencilShadow.obj
+         Debug\CTRTextureBlend.obj
+         Debug\CTRTextureDetailMap2.obj
+         Debug\CTRTextureGouraud2.obj
+         Debug\CTRTextureGouraudAdd2.obj
+         Debug\CTRTextureGouraudAddNoZ2.obj
+         Debug\CTRTextureGouraudAlpha.obj
+         Debug\CTRTextureGouraudNoZ.obj
+         Debug\CTRTextureGouraudNoZ2.obj
+         Debug\CTRTextureGouraudVertexAlpha2.obj
+         Debug\CTRTextureLightMap2_Add.obj
+         Debug\CTRTextureLightMap2_M1.obj
+         Debug\CTRTextureLightMap2_M2.obj
+         Debug\CTRTextureLightMap2_M4.obj
+         Debug\CTRTextureLightMapGouraud2_M4.obj
+         Debug\CTRTextureWire2.obj
+         Debug\IBurningShader.obj
+         Debug\CCgMaterialRenderer.obj
+         Debug\CVideoModeList.obj
+         Debug\CD3D8Driver.obj
+         Debug\CD3D8NormalMapRenderer.obj
+         Debug\CD3D8ParallaxMapRenderer.obj
+         Debug\CD3D8ShaderMaterialRenderer.obj
+         Debug\CD3D8Texture.obj
+         Debug\CD3D9CgMaterialRenderer.obj
+         Debug\CD3D9Driver.obj
+         Debug\CD3D9HLSLMaterialRenderer.obj
+         Debug\CD3D9NormalMapRenderer.obj
+         Debug\CD3D9ParallaxMapRenderer.obj
+         Debug\CD3D9ShaderMaterialRenderer.obj
+         Debug\CD3D9Texture.obj
+         Debug\CColorConverter.obj
+         Debug\CFPSCounter.obj
+         Debug\CImage.obj
+         Debug\CNullDriver.obj
+         Debug\CImageLoaderBMP.obj
+         Debug\CImageLoaderDDS.obj
+         Debug\CImageLoaderJPG.obj
+         Debug\CImageLoaderPCX.obj
+         Debug\CImageLoaderPNG.obj
+         Debug\CImageLoaderPPM.obj
+         Debug\CImageLoaderPSD.obj
+         Debug\CImageLoaderRGB.obj
+         Debug\CImageLoaderTGA.obj
+         Debug\CImageLoaderWAL.obj
+         Debug\CImageWriterBMP.obj
+         Debug\CImageWriterJPG.obj
+         Debug\CImageWriterPCX.obj
+         Debug\CImageWriterPNG.obj
+         Debug\CImageWriterPPM.obj
+         Debug\CImageWriterPSD.obj
+         Debug\CImageWriterTGA.obj
+         Debug\COpenGLCgMaterialRenderer.obj
+         Debug\COpenGLDriver.obj
+         Debug\COpenGLExtensionHandler.obj
+         Debug\COpenGLNormalMapRenderer.obj
+         Debug\COpenGLParallaxMapRenderer.obj
+         Debug\COpenGLShaderMaterialRenderer.obj
+         Debug\COpenGLSLMaterialRenderer.obj
+         Debug\COpenGLTexture.obj
+         Debug\CSoftwareDriver.obj
+         Debug\CSoftwareTexture.obj
+         Debug\CTRFlat.obj
+         Debug\CTRFlatWire.obj
+         Debug\CTRGouraud.obj
+         Debug\CTRGouraudWire.obj
+         Debug\CTRTextureFlat.obj
+         Debug\CTRTextureFlatWire.obj
+         Debug\CTRTextureGouraud.obj
+         Debug\CTRTextureGouraudAdd.obj
+         Debug\CTRTextureGouraudAlphaNoZ.obj
+         Debug\CTRTextureGouraudWire.obj
+         Debug\CZBuffer.obj
+         Debug\cdjpeg.obj
+         Debug\jaricom.obj
+         Debug\jcapimin.obj
+         Debug\jcapistd.obj
+         Debug\jcarith.obj
+         Debug\jccoefct.obj
+         Debug\jccolor.obj
+         Debug\jcdctmgr.obj
+         Debug\jchuff.obj
+         Debug\jcinit.obj
+         Debug\jcmainct.obj
+         Debug\jcmarker.obj
+         Debug\jcmaster.obj
+         Debug\jcomapi.obj
+         Debug\jcparam.obj
+         Debug\jcprepct.obj
+         Debug\jcsample.obj
+         Debug\jctrans.obj
+         Debug\jdapimin.obj
+         Debug\jdapistd.obj
+         Debug\jdarith.obj
+         Debug\jdatadst.obj
+         Debug\jdatasrc.obj
+         Debug\jdcoefct.obj
+         Debug\jdcolor.obj
+         Debug\jddctmgr.obj
+         Debug\jdhuff.obj
+         Debug\jdinput.obj
+         Debug\jdmainct.obj
+         Debug\jdmarker.obj
+         Debug\jdmaster.obj
+         Debug\jdmerge.obj
+         Debug\jdpostct.obj
+         Debug\jdsample.obj
+         Debug\jdtrans.obj
+         Debug\jerror.obj
+         Debug\jfdctflt.obj
+         Debug\jfdctfst.obj
+         Debug\jfdctint.obj
+         Debug\jidctflt.obj
+         Debug\jidctfst.obj
+         Debug\jidctint.obj
+         Debug\jmemmgr.obj
+         Debug\jmemname.obj
+         Debug\jquant1.obj
+         Debug\jquant2.obj
+         Debug\jutils.obj
+         Debug\rdbmp.obj
+         Debug\rdcolmap.obj
+         Debug\rdgif.obj
+         Debug\rdppm.obj
+         Debug\rdrle.obj
+         Debug\rdswitch.obj
+         Debug\rdtarga.obj
+         Debug\transupp.obj
+         Debug\wrbmp.obj
+         Debug\wrgif.obj
+         Debug\wrppm.obj
+         Debug\wrrle.obj
+         Debug\wrtarga.obj
+         Debug\png.obj
+         Debug\pngerror.obj
+         Debug\pngget.obj
+         Debug\pngmem.obj
+         Debug\pngpread.obj
+         Debug\pngread.obj
+         Debug\pngrio.obj
+         Debug\pngrtran.obj
+         Debug\pngrutil.obj
+         Debug\pngset.obj
+         Debug\pngtrans.obj
+         Debug\pngwio.obj
+         Debug\pngwrite.obj
+         Debug\pngwtran.obj
+         Debug\pngwutil.obj
+         Debug\LzmaDec.obj
+         Debug\adler32.obj
+         Debug\compress.obj
+         Debug\crc32.obj
+         Debug\deflate.obj
+         Debug\gzclose.obj
+         Debug\gzlib.obj
+         Debug\gzread.obj
+         Debug\gzwrite.obj
+         Debug\infback.obj
+         Debug\inffast.obj
+         Debug\inflate.obj
+         Debug\inftrees.obj
+         Debug\trees.obj
+         Debug\uncompr.obj
+         Debug\zutil.obj
+         irrLitch.vcxproj -> E:\Projects Data\TheFirst\prj\Debug\irrLitch.lib
+     1>Done Building Project "E:\Projects Data\TheFirst\ExternalLibs\irrLicht\prj\irrLitch.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:17.62

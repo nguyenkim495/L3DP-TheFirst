@@ -1,0 +1,24 @@
+﻿Build started 11/7/2018 7:35:20 AM.
+     1>Project "E:\Projects Data\TheFirst\ExternalLibs\irrKlang\prj\irrKlang_2012.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\Projects Data\TheFirst\ExternalLibs\irrKlang\prj\../include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\plugins\ikpMP3\CIrrKlangAudioStreamLoaderMP3.cpp ..\plugins\ikpMP3\CIrrKlangAudioStreamMP3.cpp ..\plugins\ikpMP3\ikpMP3.cpp
+         ikpMP3.cpp
+         CIrrKlangAudioStreamMP3.cpp
+         CIrrKlangAudioStreamLoaderMP3.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\Projects Data\TheFirst\ExternalLibs\irrKlang\prj\../include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\plugins\ikpMP3\decoder\bits.c ..\plugins\ikpMP3\decoder\mpaudec.c
+         mpaudec.c
+         bits.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"E:\Projects Data\TheFirst\prj\Debug\irrKlang_2012.lib" /LIBPATH:"E:\Projects Data\TheFirst\ExternalLibs\irrKlang\prj\..\staticLib\Win32-visualStudio" /NOLOGO Debug\CIrrKlangAudioStreamLoaderMP3.obj
+         Debug\CIrrKlangAudioStreamMP3.obj
+         Debug\bits.obj
+         Debug\mpaudec.obj
+         Debug\ikpMP3.obj
+         irrKlang_2012.vcxproj -> E:\Projects Data\TheFirst\prj\Debug\irrKlang_2012.lib
+     1>Done Building Project "E:\Projects Data\TheFirst\ExternalLibs\irrKlang\prj\irrKlang_2012.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.32
