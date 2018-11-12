@@ -1,6 +1,13 @@
 #pragma once
 
 #include <irrlicht.h>
+#include "Game.h"
+
+namespace Screen
+{
+	static const int SCREEN_WIDTH = 1900;
+	static const int SCREEN_HEIGHT = 1000;
+}
 
 class App : public irr::IEventReceiver
 {
@@ -22,10 +29,17 @@ public:
 		return false;
 	}
 
-	void Render();
-	void Update();
-	void Destroy();
+	void	Init();
 
-	void onKeyEvent(irr::EKEY_CODE);
-	void onMouseEvent(irr::EMOUSE_INPUT_EVENT);
+	void	Render();
+	void	Update();
+	void	Destroy();
+
+	void	onKeyEvent(irr::EKEY_CODE);
+	void	onMouseEvent(irr::EMOUSE_INPUT_EVENT);
+
+private:
+	float	delta;
+	Game*	m_game;
+
 };

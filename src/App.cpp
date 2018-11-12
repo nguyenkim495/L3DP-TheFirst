@@ -1,10 +1,11 @@
+#include <time.h>
+
 #include "App.h"
 #include <Game.h>
 
+
 using namespace irr;
 
-static const int SCREEN_WIDTH = 1900;
-static const int SCREEN_HEIGHT = 1000;
 
 App* App::m_Instance = 0;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,6 +21,13 @@ App* App::GetInstance()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void App::Init()
+{
+	delta = 0.0f;
+	//m_game = new Game();
+	//m_game->Init(m_DEVICE);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Destroy()
 {
 	//delete m_Instance;
@@ -28,14 +36,23 @@ void App::Destroy()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Render()
 {
-	Game::GetInstance()->Render();
+	m_game->Render();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Update()
 {
-	App::Render();
-	//Game::GetInstance()->Update();
+	time_t timeNow = time(0);
+
+	//if(!m_game)// == nullptr)
+	{
+		m_game = new Game();
+		m_game->Init(m_DEVICE);
+	}
+
+	m_game->Update(delta);
+
+	delta = time(0) - timeNow;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //bool App::OnEvent(irr::SEvent& event)
@@ -46,13 +63,13 @@ void App::Update()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::onKeyEvent(irr::EKEY_CODE keyCode)
 {
-	Game::GetInstance()->OnKeyEvent(keyCode);
+	Game::Instance()->OnKeyEvent(keyCode);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::onMouseEvent(irr::EMOUSE_INPUT_EVENT mouseCode)
 {
-	Game::GetInstance()->OnMouseEvent(mouseCode);
+	Game::Instance()->OnMouseEvent(mouseCode);
 }
 
 //#pragma comment(lib, "irrKlang.lib") //prefer setting in Game_2012/properties/Linker/Input/Additional Dependencies
@@ -61,12 +78,13 @@ void App::onMouseEvent(irr::EMOUSE_INPUT_EVENT mouseCode)
 int main(int argc, char** argv) //lol this function, cant run as name Main
 {
 	App* m_AppGlobal = new App();
-	irr::IrrlichtDevice* DEVICE = createDevice(video::EDT_OPENGL, core::dimension2d<u32>(SCREEN_WIDTH, SCREEN_HEIGHT), 32, false, false, true, m_AppGlobal);
+	irr::IrrlichtDevice* DEVICE = createDevice(video::EDT_OPENGL, core::dimension2d<u32>(Screen::SCREEN_WIDTH, Screen::SCREEN_HEIGHT), 32, false, false, true, m_AppGlobal);
 
 	m_AppGlobal->CreatApplication();
 	m_AppGlobal->GetInstance()->m_DEVICE = DEVICE;
 	m_AppGlobal->GetInstance()->m_DRIVER = DEVICE->getVideoDriver();
 	m_AppGlobal->GetInstance()->m_SMGR = DEVICE->getSceneManager();
+	m_AppGlobal->GetInstance()->Init();
 
 	DEVICE->setResizable(false);
 	m_AppGlobal->GetInstance()->m_DRIVER->beginScene(true, true, video::SColor(255, 255, 255, 255));

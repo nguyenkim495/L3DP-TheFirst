@@ -1,34 +1,56 @@
 #pragma once
 
 #include <irrlicht.h>
+#include <string>
 
-enum StateID
+//#include "State\StateMgr.h"
+
+enum StateIdlist
 {
-	STATE_LOADING = 0,
-	STATE_GAMEPLAY,
-	STATE_ABOUT,
-	STATE_SETTING
+	STATE_LOADING = 0, //"LoadingState"
+	STATE_GAMEPLAY,	  //GamePlayState
+	STATE_ABOUT,      //AboutState
+	STATE_SETTING     //SettingState
+};
+
+struct StateId
+{
+	StateId(const std::string id)
+	{
+		m_stateId = id;
+	};
+
+
+	std::string m_stateId;
+	std::string value()
+	{
+		return m_stateId;
+	}
 };
 
 class State : public irr::IEventReceiver
 {
 protected:
-	StateID m_stateID;
+	const StateId m_stateId;
 public:
-	State(){}
-	State(StateID);
-	~State(){}
+	State():m_stateId(""){};
+	explicit	State(const std::string&);
+	virtual		~State(){};
+
+	friend class StateMgr;
 public:
-	//static State* m_state;
+	virtual void	Init();
+	virtual void	Render();
+	virtual void	Update(float dt);
 
-	void		Init();
-	void		Render();
-	void		Update(float dt);
-	void		Pause();
-	void		Resume();
-	void		Release();//
+	virtual void	Pause();
+	virtual void	Resume();
+	virtual void	Release();
 
-	bool		OnEvent(const irr::SEvent& event);
+	virtual void	GotFocus();
+	virtual void	LostFocus();
 
-	StateID		GetStateID() const;
+	virtual bool	OnEvent(const irr::SEvent& event);
+
+	StateId	GetStateId() const;
 };

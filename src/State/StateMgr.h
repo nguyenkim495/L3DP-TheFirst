@@ -1,42 +1,43 @@
 #pragma once
 
-#include "State.h"
+#include "State\State.h"
+#include <vector>
+#include <deque>
 
-#define MAX_STATES 4
-
-enum StateAction
+enum Commandlist
 {
 	POP,
 	PUSH,
-	REMOVE,
+};
+
+struct Command
+{
+	Commandlist command;
+	State* Obj;
 };
 
 class StateMgr
 {
 public:
-	StateMgr();
-	~StateMgr();
-	static StateMgr *m_StateMgr;
+	void	Push(State*);
+	void	Pop();
+	void	PopAll();
+	void	Switch(State*);
 
-private:
-	State* m_pStacks[4];
-	State* m_pDeleteStacks[1];
-
-public:
-	void	PushState(State);
-	void	PopState(State);
-	State*	GetCurrentState() const;//state on top
+	State*	Current() const;//state on top
+	State*	GetStateId(StateId& id) const;
 	State*	GetPreviousState() const;
+
+	void	AddCommand(const Command& command);
 	void	Update(float dt);
+	void	Render();
 	void	ChangeState(State, bool deleteState);
 	void	MarkStateToDelete(State);
 
+	void	OnBackeyEvent();
+
+private:
+	std::vector<State*> m_states;
+	std::deque<Command> m_commands;
+
 };
-
-StateMgr::StateMgr()
-{
-}
-
-StateMgr::~StateMgr()
-{
-}

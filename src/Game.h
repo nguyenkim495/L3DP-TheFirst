@@ -7,31 +7,38 @@
 
 using namespace irr;
 
+
+class StateMgr;
+
 class Game
 {
 private:
-	
+	irr::IrrlichtDevice* m_device;
+	static Game* m_Instance;
 public:
 
-	static Game* m_GameInstance;
+	static Game* Instance();
 
-	irr::IrrlichtDevice* m_device;
-	irr::video::IVideoDriver* m_driver;
-
-	static void CreateInstance();
-	static Game* GetInstance();
-
-	bool CreateIrrDevice();
 	IrrlichtDevice* GetIrrDevice();
-
-	bool CreateIrrVideoDriver();
 	irr::video::IVideoDriver* GetIVideoDriver();
 
-	void Render();
-	void Update();
+	Game();
+	~Game();
 
-	bool OnKeyEvent(irr::EKEY_CODE);
-	bool OnMouseEvent(irr::EMOUSE_INPUT_EVENT);
+	void	Init(irr::IrrlichtDevice*);
+
+	void	Render();
+	void	Update(float dt);
+
+	bool	OnKeyEvent(irr::EKEY_CODE);
+	bool	OnMouseEvent(irr::EMOUSE_INPUT_EVENT);
+
+public:
+	static	StateMgr*	GetStateMgr();
+
+private:
+	bool	m_Init;
+	StateMgr*	m_stateMgr;
 
 };
 #endif
