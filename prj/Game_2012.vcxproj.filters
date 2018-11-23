@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="include">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -20,6 +16,9 @@
     </Filter>
     <Filter Include="src\State">
       <UniqueIdentifier>{40b1603f-b15b-4b36-bb43-b885b1f81f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Input">
+      <UniqueIdentifier>{1b52594b-975c-4dfc-b8ef-dae18170b3d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +55,9 @@
     <ClCompile Include="..\src\State\LoadingState.cpp">
       <Filter>src\State</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Input\InputManager.cpp">
+      <Filter>src\Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Sprite\SimpleSprite.h">
@@ -84,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="..\src\State\LoadingState.h">
       <Filter>src\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Input\InputManager.h">
+      <Filter>src\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

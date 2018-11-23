@@ -11,7 +11,10 @@ App* App::m_Instance = 0;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::CreatApplication()
 {
-	m_Instance = new App();
+	if(this == nullptr)
+		m_Instance = new App();
+	else
+		m_Instance = this;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -21,16 +24,33 @@ App* App::GetInstance()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+App::App():
+	m_currentStartFrame(0),
+	m_previousStartFrame(0)
+{
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+App::~App()
+{
+	if(m_Instance)
+	{
+		Destroy();
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Init()
 {
-	delta = 0.0f;
-	//m_game = new Game();
-	//m_game->Init(m_DEVICE);
+	m_game = new Game();
+	m_game->Init(m_DEVICE);
+
+	SetTargetFps(60);
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Destroy()
 {
-	//delete m_Instance;
+	if(m_Instance)
+		delete m_Instance;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,23 +62,88 @@ void App::Render()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::Update()
 {
-	time_t timeNow = time(0);
+	BeginFrame();
 
-	//if(!m_game)// == nullptr)
-	{
-		m_game = new Game();
-		m_game->Init(m_DEVICE);
-	}
+	int dt = (int)m_currentStartFrame - m_previousStartFrame;
+	Update(dt);
 
-	m_game->Update(delta);
+	EndFrame();
 
-	delta = time(0) - timeNow;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//bool App::OnEvent(irr::SEvent& event)
-//{
-//
-//}
+void App::Update(int dt)
+{
+	if(!m_game)
+		return;
+
+	if(!m_game->IsInit())
+	{
+		m_game->Init(m_DEVICE);
+		return;
+	}
+
+	m_game->Update(dt);
+	Render();
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void App::SetTargetFps(unsigned int fps)
+{
+	m_TargetFps = fps;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void App::BeginFrame()
+{
+	m_previousStartFrame = m_currentStartFrame;
+
+	time_t now = time(0);
+
+	//limit the fps
+	unsigned int target = unsigned int(1000/m_TargetFps);
+	unsigned int elapsed = unsigned int (now - m_previousStartFrame);
+	unsigned int delay = target - elapsed;
+	if(delay > 0 && delay <= elapsed)
+	{
+		_sleep(delay);
+		time(&now);
+	}
+	m_currentStartFrame = now;
+
+	if(m_game)
+	{
+		m_game->BeginFrame();
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void App::EndFrame()
+{
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+bool App::OnEvent(const irr::SEvent& event)
+{
+	switch (event.EventType)
+	{
+	case irr::EET_GUI_EVENT:
+		break;
+	case irr::EET_MOUSE_INPUT_EVENT:
+		//event.MouseInput.ButtonStates;
+		onMouseEvent(event.MouseInput.Event);
+		break;
+	case irr::EET_KEY_INPUT_EVENT:
+		//onKeyEvent(event.KeyInput);
+		break;
+	case irr::EET_JOYSTICK_INPUT_EVENT:
+		break;
+	case irr::EET_LOG_TEXT_EVENT:
+		break;
+	case irr::EET_USER_EVENT:
+		break;
+
+	default:
+		break;
+	}
+	return false;
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void App::onKeyEvent(irr::EKEY_CODE keyCode)
@@ -71,6 +156,13 @@ void App::onMouseEvent(irr::EMOUSE_INPUT_EVENT mouseCode)
 {
 	Game::Instance()->OnMouseEvent(mouseCode);
 }
+
+
+
+
+
+
+
 
 //#pragma comment(lib, "irrKlang.lib") //prefer setting in Game_2012/properties/Linker/Input/Additional Dependencies
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +179,6 @@ int main(int argc, char** argv) //lol this function, cant run as name Main
 	m_AppGlobal->GetInstance()->Init();
 
 	DEVICE->setResizable(false);
-	m_AppGlobal->GetInstance()->m_DRIVER->beginScene(true, true, video::SColor(255, 255, 255, 255));
 
 	while (m_AppGlobal->GetInstance()->m_DEVICE->run())
 	{

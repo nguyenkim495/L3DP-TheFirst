@@ -1,31 +1,30 @@
-#ifndef __GAME__
-#define __GAME__
+#pragma once
 
 #include <IVideoDriver.h>
 #include "IrrlichtDevice.h"
 #include <irrlicht.h>
+
+#include "Core\Utils\Singleton.h"
 
 using namespace irr;
 
 
 class StateMgr;
 
-class Game
+class Game : public Singleton<Game>
 {
 private:
 	irr::IrrlichtDevice* m_device;
-	static Game* m_Instance;
+
 public:
-
-	static Game* Instance();
-
-	IrrlichtDevice* GetIrrDevice();
-	irr::video::IVideoDriver* GetIVideoDriver();
-
 	Game();
 	~Game();
 
 	void	Init(irr::IrrlichtDevice*);
+
+	void	BeginFrame();
+	void	EndFrame();
+	bool	IsInit();
 
 	void	Render();
 	void	Update(float dt);
@@ -34,11 +33,19 @@ public:
 	bool	OnMouseEvent(irr::EMOUSE_INPUT_EVENT);
 
 public:
-	static	StateMgr*	GetStateMgr();
+	StateMgr* GetStateMgr() const;
+	IrrlichtDevice* GetIrrDevice() const;
+	irr::video::IVideoDriver* GetIVideoDriver() const;
+	irr::scene::ISceneManager* GetISceneManager() const;
+
 
 private:
-	bool	m_Init;
+	bool	m_IsInit;
 	StateMgr*	m_stateMgr;
 
 };
-#endif
+
+inline Game* GetGame()
+{
+	return Game::Instance();
+}

@@ -5,13 +5,16 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="includes">
-      <UniqueIdentifier>{9931d312-e272-40f8-9962-5efaf1bf503e}</UniqueIdentifier>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{b34d70ce-cbce-494c-bf0b-dee238631b7d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Core\Common.h">
-      <Filter>includes</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Utils\Singleton.h">
+      <Filter>src\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

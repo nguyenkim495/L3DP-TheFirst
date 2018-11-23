@@ -1,5 +1,7 @@
 #pragma once
 
+#include <time.h>
+
 #include <irrlicht.h>
 #include "Game.h"
 
@@ -24,22 +26,30 @@ public:
 	static App* m_Instance;
 	App* GetInstance();
 	void CreatApplication();
-	virtual bool OnEvent(const irr::SEvent&)
-	{
-		return false;
-	}
+	
+	explicit	App();
+	~App();
 
 	void	Init();
 
 	void	Render();
 	void	Update();
+	void	Update(int dt);
 	void	Destroy();
 
+	virtual bool OnEvent(const irr::SEvent&);
 	void	onKeyEvent(irr::EKEY_CODE);
 	void	onMouseEvent(irr::EMOUSE_INPUT_EVENT);
 
+	void	SetTargetFps(unsigned int fps);
+	void	BeginFrame();
+	void	EndFrame();
+
 private:
-	float	delta;
+	unsigned int m_TargetFps;
+	time_t m_previousStartFrame;
+	time_t m_currentStartFrame;
+
 	Game*	m_game;
 
 };
