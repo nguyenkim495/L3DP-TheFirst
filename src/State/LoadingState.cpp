@@ -1,5 +1,5 @@
 #include "LoadingState.h"
-
+#include "Game.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 LoadingState::LoadingState():
@@ -19,6 +19,8 @@ void LoadingState::Init()
 {
 	core::vector3df pos = core::vector3df(0.0, 0.0, 0.0);
 	m_SpriteLogo = new SimpleSprite("../res/sydney.bmp", pos);
+	//GetGame()->GetIrrDevice()->setEventReceiver(this);
+	//Enable this one, will disable other eventReceiver custom
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

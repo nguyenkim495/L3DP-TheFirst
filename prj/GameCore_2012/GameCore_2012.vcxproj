@@ -12,7 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Core\Common.h" />
+    <ClInclude Include="..\..\src\Core\Dispatcher\Message.h" />
+    <ClInclude Include="..\..\src\Core\Dispatcher\MessageType.h" />
+    <ClInclude Include="..\..\src\Core\Dispatcher\MsgDispatcher.h" />
+    <ClInclude Include="..\..\src\Core\Dispatcher\MsgReceiver.h" />
     <ClInclude Include="..\..\src\Core\Utils\Singleton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Core\Dispatcher\Message.cpp" />
+    <ClCompile Include="..\..\src\Core\Dispatcher\MsgDispatcher.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1E821B61-E29C-4FAE-8E47-1F5F88D2FCEE}</ProjectGuid>
@@ -20,7 +28,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>

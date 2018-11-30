@@ -83,7 +83,10 @@
     <ClCompile Include="..\src\App.cpp" />
     <ClCompile Include="..\src\Game.cpp" />
     <ClCompile Include="..\src\HelloWorld.cpp" />
-    <ClCompile Include="..\src\Input\InputManager.cpp" />
+    <ClCompile Include="..\src\Input\EventMgr.cpp" />
+    <ClCompile Include="..\src\Menu\LoadingMenu.cpp" />
+    <ClCompile Include="..\src\Menu\Menu.cpp" />
+    <ClCompile Include="..\src\Menu\MenuMgr.cpp" />
     <ClCompile Include="..\src\SceneNode\SceneNode.cpp" />
     <ClCompile Include="..\src\Sound\Sound.cpp" />
     <ClCompile Include="..\src\Sound\SoundManager.cpp" />
@@ -103,11 +106,17 @@
     <ProjectReference Include="..\ExternalLibs\irrLicht\prj\irrLitch.vcxproj">
       <Project>{3fd1f88c-5e66-4209-804f-374c9354c128}</Project>
     </ProjectReference>
+    <ProjectReference Include="GameCore_2012\GameCore_2012.vcxproj">
+      <Project>{1e821b61-e29c-4fae-8e47-1f5f88d2fcee}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\App.h" />
     <ClInclude Include="..\src\Game.h" />
-    <ClInclude Include="..\src\Input\InputManager.h" />
+    <ClInclude Include="..\src\Input\EventMgr.h" />
+    <ClInclude Include="..\src\Menu\LoadingMenu.h" />
+    <ClInclude Include="..\src\Menu\Menu.h" />
+    <ClInclude Include="..\src\Menu\MenuMgr.h" />
     <ClInclude Include="..\src\SceneNode\SceneNode.h" />
     <ClInclude Include="..\src\Sound\Sound.h" />
     <ClInclude Include="..\src\Sound\SoundManager.h" />

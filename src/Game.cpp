@@ -1,13 +1,22 @@
 #include "Game.h"
 #include "State\StateMgr.h"
 #include "State\LoadingState.h"
+#include "Core\Dispatcher\MsgDispatcher.h"
+
+#include "Menu\MenuMgr.h"
+#include "Menu\LoadingMenu.h"
+
+#include "Input\EventMgr.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Game::Game():
 	Singleton(),
 	m_IsInit(false),
-	m_stateMgr(nullptr)
+	m_stateMgr(nullptr),
+	m_eventMgr(nullptr),
+	m_msgDispatcher(nullptr),
+	m_menuMgr(nullptr)
 {
 
 }
@@ -16,13 +25,17 @@ Game::~Game()
 {
 
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //I have no idea here, get driver information from App
 void Game::Init(irr::IrrlichtDevice* device)
 {
 	m_device = device;
 	m_stateMgr = new StateMgr();
-	GetISceneManager()->addCameraSceneNode(0, vector3df(0, 90, 120), vector3df(0, 30, 0));
+	m_eventMgr = new EventMgr();
+	m_msgDispatcher = new MsgDispatcher();
+	m_menuMgr = new MenuMgr();
+	//GetISceneManager()->addCameraSceneNode(0, vector3df(0, 90, 120), vector3df(0, 30, 0));
 	m_IsInit = true;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,47 +43,62 @@ void Game::BeginFrame()
 {
 
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Game::EndFrame()
 {
 
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool Game::IsInit()
 {
 	return m_IsInit;
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void Game::Render()
 {
 	GetIVideoDriver()->beginScene(true, true, SColor(255,100,101,140));
 //	GetISceneManager()->drawAll();
 	m_stateMgr->Render();
+	m_menuMgr->Render();
 	GetIVideoDriver()->endScene();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void Game::Update(float dt)
+void Game::Update(int dt)
 {
-	if(this->m_stateMgr != nullptr)
-		this->m_stateMgr->Update(dt);
+	if(m_stateMgr != nullptr)
+		m_stateMgr->Update(dt);
 
+	if(m_eventMgr != nullptr)
+		m_eventMgr->Update(dt);
+	
+	if(m_menuMgr != nullptr)
+		m_menuMgr->Update(dt);
 	
 	//test
 	auto state = m_stateMgr->Current();
 	if(!state)
 		this->m_stateMgr->Switch(new LoadingState());
+	
+	auto menu = m_menuMgr->GetTopMenu();
+	if(!menu)
+		m_menuMgr->OpenMenu(new LoadingMenu());
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-bool Game::OnKeyEvent(irr::EKEY_CODE keyCode)
+bool Game::OnKeyEvent(irr::SEvent::SKeyInput keyEvent)
 {
 	//??? how to control chracter?
+	Message msg = Message("loading has done");
+	m_msgDispatcher->Raise(MessageType::MT_LoadingDone, msg);
 	return false;//??
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-bool Game::OnMouseEvent(irr::EMOUSE_INPUT_EVENT mouseEvent)
+bool Game::OnMouseEvent(irr::SEvent::SMouseInput mouseEvent)
 {
 	//???
 	return false;//???
@@ -85,15 +113,34 @@ irr::video::IVideoDriver* Game::GetIVideoDriver() const
 {
 	return m_device->getVideoDriver();
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-StateMgr* Game::GetStateMgr() const
-{
-	return m_stateMgr;
-}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 irr::scene::ISceneManager* Game::GetISceneManager() const
 {
 	return m_device->getSceneManager();
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+StateMgr* Game::GetStateMgr() const
+{
+	return m_stateMgr;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+EventMgr* Game::GetEventMgr() const
+{
+	return m_eventMgr;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+MsgDispatcher* Game::GetMsgDispatcher() const
+{
+	return m_msgDispatcher;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+MenuMgr* Game::GetMenuMgr() const
+{
+	return m_menuMgr;
+}
 

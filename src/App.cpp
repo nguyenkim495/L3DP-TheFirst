@@ -2,6 +2,7 @@
 
 #include "App.h"
 #include <Game.h>
+#include "Input\EventMgr.h"
 
 
 using namespace irr;
@@ -26,9 +27,10 @@ App* App::GetInstance()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 App::App():
 	m_currentStartFrame(0),
-	m_previousStartFrame(0)
+	m_previousStartFrame(0),
+	m_game(nullptr)
 {
-
+	
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 App::~App()
@@ -121,16 +123,15 @@ void App::EndFrame()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool App::OnEvent(const irr::SEvent& event)
 {
-	switch (event.EventType)
+	/*switch (event.EventType)
 	{
 	case irr::EET_GUI_EVENT:
 		break;
 	case irr::EET_MOUSE_INPUT_EVENT:
-		//event.MouseInput.ButtonStates;
-		onMouseEvent(event.MouseInput.Event);
+		onMouseEvent(event.MouseInput);
 		break;
 	case irr::EET_KEY_INPUT_EVENT:
-		//onKeyEvent(event.KeyInput);
+		onKeyEvent(event.KeyInput);
 		break;
 	case irr::EET_JOYSTICK_INPUT_EVENT:
 		break;
@@ -142,17 +143,32 @@ bool App::OnEvent(const irr::SEvent& event)
 	default:
 		break;
 	}
-	return false;
+	return false;*/
+
+	/*keyboard, mouse
+	system, gui*/
+
+	if(!m_game)
+		return false;
+
+	if(m_game->IsInit())
+	{
+		return m_game->GetEventMgr()->OnEvent(event);
+	}
+	else
+	{
+		return false;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void App::onKeyEvent(irr::EKEY_CODE keyCode)
+void App::onKeyEvent(irr::SEvent::SKeyInput keyCode)
 {
-	Game::Instance()->OnKeyEvent(keyCode);
+	//Game::Instance()->OnKeyEvent(keyCode);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void App::onMouseEvent(irr::EMOUSE_INPUT_EVENT mouseCode)
+void App::onMouseEvent(irr::SEvent::SMouseInput mouseCode)
 {
 	Game::Instance()->OnMouseEvent(mouseCode);
 }

@@ -5,11 +5,15 @@
 #include <irrlicht.h>
 
 #include "Core\Utils\Singleton.h"
+//#include "Core\Dispatcher\MsgDispatcher.h"
 
 using namespace irr;
 
 
 class StateMgr;
+class EventMgr;
+class MsgDispatcher;
+class MenuMgr;
 
 class Game : public Singleton<Game>
 {
@@ -27,21 +31,27 @@ public:
 	bool	IsInit();
 
 	void	Render();
-	void	Update(float dt);
+	void	Update(int dt);
 
-	bool	OnKeyEvent(irr::EKEY_CODE);
-	bool	OnMouseEvent(irr::EMOUSE_INPUT_EVENT);
+	bool	OnKeyEvent(irr::SEvent::SKeyInput);
+	bool	OnMouseEvent(irr::SEvent::SMouseInput);
 
 public:
-	StateMgr* GetStateMgr() const;
-	IrrlichtDevice* GetIrrDevice() const;
-	irr::video::IVideoDriver* GetIVideoDriver() const;
-	irr::scene::ISceneManager* GetISceneManager() const;
+	IrrlichtDevice*				GetIrrDevice() const;
+	irr::video::IVideoDriver*	GetIVideoDriver() const;
+	irr::scene::ISceneManager*	GetISceneManager() const;
 
+	StateMgr*		GetStateMgr() const;
+	EventMgr*		GetEventMgr() const;
+	MsgDispatcher*	GetMsgDispatcher() const;
+	MenuMgr*		GetMenuMgr() const;
 
 private:
-	bool	m_IsInit;
-	StateMgr*	m_stateMgr;
+	bool			m_IsInit;
+	StateMgr*		m_stateMgr;
+	EventMgr*		m_eventMgr;
+	MsgDispatcher*	m_msgDispatcher;
+	MenuMgr*		m_menuMgr;
 
 };
 

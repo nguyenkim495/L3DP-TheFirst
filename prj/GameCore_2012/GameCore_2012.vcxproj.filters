@@ -8,6 +8,9 @@
     <Filter Include="src\Utils">
       <UniqueIdentifier>{b34d70ce-cbce-494c-bf0b-dee238631b7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Dispatcher">
+      <UniqueIdentifier>{2b0d26d5-d5b1-416d-b638-8cd87b3095dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Core\Common.h">
@@ -16,5 +19,25 @@
     <ClInclude Include="..\..\src\Core\Utils\Singleton.h">
       <Filter>src\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Core\Dispatcher\MsgReceiver.h">
+      <Filter>src\Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Dispatcher\MsgDispatcher.h">
+      <Filter>src\Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Dispatcher\MessageType.h">
+      <Filter>src\Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Dispatcher\Message.h">
+      <Filter>src\Dispatcher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Core\Dispatcher\MsgDispatcher.cpp">
+      <Filter>src\Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Dispatcher\Message.cpp">
+      <Filter>src\Dispatcher</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -38,8 +38,8 @@ public:
 	void	Destroy();
 
 	virtual bool OnEvent(const irr::SEvent&);
-	void	onKeyEvent(irr::EKEY_CODE);
-	void	onMouseEvent(irr::EMOUSE_INPUT_EVENT);
+	void	onKeyEvent(irr::SEvent::SKeyInput);
+	void	onMouseEvent(irr::SEvent::SMouseInput);
 
 	void	SetTargetFps(unsigned int fps);
 	void	BeginFrame();

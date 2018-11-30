@@ -20,6 +20,12 @@
     <Filter Include="src\Input">
       <UniqueIdentifier>{1b52594b-975c-4dfc-b8ef-dae18170b3d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Menu">
+      <UniqueIdentifier>{bc2b9079-49f2-424e-b780-0338f7f042b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Menu\Loading">
+      <UniqueIdentifier>{1f3fd3e3-a750-4660-bda2-3cf62a455c95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloWorld.cpp">
@@ -55,8 +61,17 @@
     <ClCompile Include="..\src\State\LoadingState.cpp">
       <Filter>src\State</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Input\InputManager.cpp">
+    <ClCompile Include="..\src\Input\EventMgr.cpp">
       <Filter>src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Menu\Menu.cpp">
+      <Filter>src\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Menu\MenuMgr.cpp">
+      <Filter>src\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Menu\LoadingMenu.cpp">
+      <Filter>src\Menu\Loading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,8 +102,17 @@
     <ClInclude Include="..\src\State\LoadingState.h">
       <Filter>src\State</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Input\InputManager.h">
+    <ClInclude Include="..\src\Input\EventMgr.h">
       <Filter>src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Menu\Menu.h">
+      <Filter>src\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Menu\MenuMgr.h">
+      <Filter>src\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Menu\LoadingMenu.h">
+      <Filter>src\Menu\Loading</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
